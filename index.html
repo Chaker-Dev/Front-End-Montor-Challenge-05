@@ -14,18 +14,19 @@
     <title>Frontend Mentor | Contact form</title>
   </head>
   <body>
+    <main>
     <div class="form-container">
-      <h3>Contact Us</h3>
-      <form action="">
+      <h2>Contact Us</h2>
+      <form id="formContact" action="" novalidate>
         <div class="name-container">
           <div class="first-name">
             <label for="firstName">First Name <span class="required-char">*</span></label>
-            <input type="text" name="firstName" id="firstName" />
+            <input type="text" name="firstName" id="firstName" required />
           </div>
           <!-- This field is required -->
           <div class="last-name">
             <label for="lastName">Last Name <span class="required-char">*</span></label>
-            <input type="text" name="lastName" id="lastName" />
+            <input type="text" name="lastName" id="lastName" required />
           </div>
           <!-- Last Name This field is required -->
         </div>
@@ -37,34 +38,37 @@
             <legend>Query Type <span class="required-char">*</span></legend>
             <div class="query-type-container">
             <label class="general-enquiry-container">
-              <input type="radio" name="query-type" id="general-enquiry" value="general-enquiry" />
+              <input type="radio" name="query-type" id="general-enquiry" value="general-enquiry" required />
               <span class="custom-radio"></span>
               <span for="general-enquiry">General Enquiry</span>
             </label>
             <label class="support-request-container">
-              <input type="radio" name="query-type" id="support-request" value="support-request"/>
+              <input type="radio" name="query-type" id="support-request" value="support-request" required/>
               <span class="custom-radio"></span>
               <span> Support Request</span>
             </label>
           </div>
+          <span class="error-message">Please select a query type </span> 
           </fieldset>
         <div class="message-container">
           <label for="message">Message <span class="required-char">*</span></label>
-           <textarea name="message" id="message" required rows="5" ></textarea>
+           <textarea name="message" id="message" required rows="4" ></textarea>
         </div>
+        <div class="term-container">
         <label class="accepet-contected-container">
-          <input type="checkbox" name="accept-contacted" id="accept-contacted">
+          <input type="checkbox" name="accept-contacted" id="accept-contacted" required>
           <span class="custom-checkbox"></span>
           <span for="accept-contacted" class="accept-contacted-text">
             I consent to being contacted by the team 
             <span class="required-char">*</span></span>
           </label>
+          <span class="error-message">To submit this form, please consent to being contacted </span>
+        </div>
         <div class="submit-container">
           <input type="submit" value="Submit" class="btn-submit">
         </div>
         <!-- Please enter a valid email address This field is required -->
-        <!-- Please select a query type Message This field is required  To submit this form, please consent to being
-        contacted  -->
+        <!-- This field is required   -->
       </form>
       <!-- Message Sent! Thanks for completing the form. We'll be in touch soon! -->
     </div>
@@ -73,5 +77,7 @@
       <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
       Coded by <a href="www.taha-solutions.fr">Chaker AICH</a>.
     </div>
+  </main>
+    <script src="script.js"></script>
   </body>
 </html>
