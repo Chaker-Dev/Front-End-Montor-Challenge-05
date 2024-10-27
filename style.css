@@ -78,6 +78,9 @@ legend {
 
 .error-message {
   color: var(--red);
+  font-size: 0.875em;
+  height: 1.2em;
+  display: block;
 }
 form input[type="text"],
 form input[type="email"],
@@ -88,8 +91,15 @@ form textarea {
   width: 100%;
   border: 1px solid var(--grey-medium);
 }
+form input[type="text"]:hover,
+form input[type="email"]:hover,
+form textarea:hover, .accepet-contected-container:hover{
+  cursor: pointer;
+}
 textarea {
   resize: none;
+  font-family: "Karla", sans-serif !important;
+  font-size: var(--fs-16);
 }
 .required-char {
   color: var(--green-medium);
@@ -167,7 +177,10 @@ input[type="checkbox"]:checked + .custom-checkbox {
     background-repeat: no-repeat;
     border: none;
 }
-
+.selected-radio {
+  background-color: var(--green-lighter);
+  border-color: var(--green-medium); 
+}
 .btn-submit {
   text-decoration: none;
   border: none;
@@ -192,4 +205,31 @@ input[type="checkbox"]:checked + .custom-checkbox {
 }
 .invalid {
   border: 1px solid var(--red) !important;
+}
+.popup-overlay {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  background: var(--green-lighter);
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.popup-content {
+  background: var(--grey-darker);
+  color: var(--white);
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 80%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.popup-content h4 {
+  margin-top: 0;
 }

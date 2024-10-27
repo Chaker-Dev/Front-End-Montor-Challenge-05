@@ -15,6 +15,12 @@
   </head>
   <body>
     <main>
+      <div id="confirmationPopup" class="popup-overlay" style="display: none;">
+        <div class="popup-content">
+            <h4>Message Sent!</h4>
+            <p>Thanks for completing the form. We'll be in touch soon!</p>
+        </div>
+    </div>
     <div class="form-container">
       <h2>Contact Us</h2>
       <form id="formContact" action="" novalidate>
@@ -22,17 +28,18 @@
           <div class="first-name">
             <label for="firstName">First Name <span class="required-char">*</span></label>
             <input type="text" name="firstName" id="firstName" required />
+            <span class="error-message"></span>
           </div>
-          <!-- This field is required -->
           <div class="last-name">
             <label for="lastName">Last Name <span class="required-char">*</span></label>
             <input type="text" name="lastName" id="lastName" required />
+            <span class="error-message"></span>
           </div>
-          <!-- Last Name This field is required -->
         </div>
         <div class="email-container">
           <label for="email">Email Address <span class="required-char">*</span></label>
           <input type="email" name="email" id="email" required />
+          <span class="error-message"></span>
         </div>
           <fieldset>
             <legend>Query Type <span class="required-char">*</span></legend>
@@ -48,11 +55,12 @@
               <span> Support Request</span>
             </label>
           </div>
-          <span class="error-message">Please select a query type </span> 
+          <span class="error-message"></span>
           </fieldset>
         <div class="message-container">
           <label for="message">Message <span class="required-char">*</span></label>
            <textarea name="message" id="message" required rows="4" ></textarea>
+           <span class="error-message"></span>
         </div>
         <div class="term-container">
         <label class="accepet-contected-container">
@@ -62,7 +70,7 @@
             I consent to being contacted by the team 
             <span class="required-char">*</span></span>
           </label>
-          <span class="error-message">To submit this form, please consent to being contacted </span>
+          <span class="error-message"></span>
         </div>
         <div class="submit-container">
           <input type="submit" value="Submit" class="btn-submit">
@@ -70,7 +78,6 @@
         <!-- Please enter a valid email address This field is required -->
         <!-- This field is required   -->
       </form>
-      <!-- Message Sent! Thanks for completing the form. We'll be in touch soon! -->
     </div>
     <div class="attribution">
       Challenge by
